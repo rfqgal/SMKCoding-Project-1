@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SMKCoding Project 1</string>
+    <string name="nama">Nama</string>
+    <string name="biodata_diri">Biodata Diri</string>
+    <string name="email">Email</string>
+    <string name="telp">Telp</string>
+    <string name="alamat">Alamat</string>
+    <string name="save">Simpan</string>
+
+    <string-array name="gender">
+        <item>Pilih Jenis Kelamin</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+</resources>
