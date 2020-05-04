@@ -11,6 +11,7 @@ class UpdateActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update)
+        setTitle("Update Profil")
 
         val intentData = intent.extras
         val name = intentData?.getString("name")

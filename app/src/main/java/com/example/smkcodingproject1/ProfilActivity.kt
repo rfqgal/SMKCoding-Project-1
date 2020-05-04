@@ -13,6 +13,7 @@ class ProfilActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profil)
+        setTitle("Profil Anda")
 
         getData()
 
@@ -28,12 +29,14 @@ class ProfilActivity : AppCompatActivity() {
         val bundle = intent.extras
 
         val name = bundle?.getString("name")
+        val age = bundle?.getString("age")
         val email = bundle?.getString("email")
         val phone = bundle?.getString("phone")
         val address = bundle?.getString("address")
         val gender = bundle?.getString("gender")
 
         tvName.text = name
+        tvAge.text = age
         tvGender.text = gender
         tvEmail.text = email
         tvPhone.text = phone

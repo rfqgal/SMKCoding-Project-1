@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:gravity="center"
             android:layout_margin="16dp"
             android:fontFamily="casual"
             android:text="@string/biodata_diri"
@@ -37,6 +38,14 @@
             android:paddingVertical="4dp" />
 
         <EditText
+            android:id="@+id/edtAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="@string/umur"
+            android:inputType="number" />
+
+        <EditText
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,7 +57,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="@string/telp" />
+            android:hint="@string/telp"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/edtAddress"

@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private var inName: String = ""
+    private var inAge: String = ""
     private var inEmail: String = ""
     private var inPhone: String = ""
     private var inAddress: String = ""
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setTitle("App Biodata")
 
         setDataSpinnerGender()
 
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         val bundle = Bundle()
         bundle.putString("name", inName)
+        bundle.putString("age", inAge)
         bundle.putString("email", inEmail)
         bundle.putString("phone", inPhone)
         bundle.putString("address", inAddress)
@@ -41,6 +44,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun validasiInput() {
         inName = edtName.text.toString()
+        inAge = edtAge.text.toString()
         inEmail = edtEmail.text.toString()
         inPhone = edtPhone.text.toString()
         inAddress = edtAddress.text.toString()
@@ -49,6 +53,7 @@ class MainActivity : AppCompatActivity() {
         when {
             inName.isEmpty() -> edtName.error = "Nama tidak boleh kosong"
             inGender.equals("Pilih Jenis Kelamin", ignoreCase = true) -> toast("Jenis kelamin harus dipilih")
+            inAge.isEmpty() -> edtAge.error = "Umur harus diisi"
             inEmail.isEmpty() -> edtEmail.error = "Email tidak boleh kosong"
             inPhone.isEmpty() -> edtPhone.error = "Nomor telepon tidak boleh kosong"
             inAddress.isEmpty() -> edtAddress.error = "Alamat tidak boleh kosong"
