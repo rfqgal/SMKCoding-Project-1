@@ -22,7 +22,7 @@
             android:fontFamily="casual"
             android:textStyle="bold" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/imgPhoto"
             android:layout_width="100dp"
             android:layout_height="100dp"

@@ -3,6 +3,8 @@ package com.example.smkcodingproject1
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.ArrayAdapter
 import android.widget.Toast
 
@@ -74,5 +76,24 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         spGender.adapter = adapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        menu(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun menu(itemId: Int) {
+        if (itemId == R.id.aboutMe) {
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        } else if (itemId == R.id.exit) {
+            finish()
+        }
     }
 }

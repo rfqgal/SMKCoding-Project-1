@@ -5,6 +5,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_profil.*
 
@@ -70,6 +72,25 @@ class ProfilActivity : AppCompatActivity() {
         }
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_profil, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        menu(item.itemId)
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun menu(itemId: Int) {
+        if (itemId == R.id.aboutMe) {
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        } else if (itemId == R.id.logout) {
+            finish()
         }
     }
 }
