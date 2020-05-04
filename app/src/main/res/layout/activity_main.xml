@@ -22,14 +22,14 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edt_name"
+            android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:hint="@string/nama" />
 
         <Spinner
-            android:id="@+id/spinner_gender"
+            android:id="@+id/spGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
@@ -37,21 +37,21 @@
             android:paddingVertical="4dp" />
 
         <EditText
-            android:id="@+id/edt_email"
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:hint="@string/email" />
 
         <EditText
-            android:id="@+id/edt_telp"
+            android:id="@+id/edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:hint="@string/telp" />
 
         <EditText
-            android:id="@+id/edt_address"
+            android:id="@+id/edtAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
@@ -59,7 +59,7 @@
             android:inputType="textMultiLine" />
 
         <Button
-            android:id="@+id/btn_save"
+            android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"

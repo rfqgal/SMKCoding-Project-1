@@ -6,6 +6,7 @@
     <string name="telp">Telp</string>
     <string name="alamat">Alamat</string>
     <string name="save">Simpan</string>
+    <string name="biodata">Biodata</string>
 
     <string-array name="gender">
         <item>Pilih Jenis Kelamin</item>
