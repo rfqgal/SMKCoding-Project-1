@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtras(bundle)
 
         startActivity(intent)
+        finish()
     }
 
     private fun validasiInput() {

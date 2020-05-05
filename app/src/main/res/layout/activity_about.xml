@@ -43,8 +43,8 @@
             android:layout_height="0.5dp"
             android:layout_below="@id/tvMyName"
             android:layout_margin="8dp"
-            android:layout_toStartOf="@id/tvDesc"
-            android:layout_toLeftOf="@id/tvDesc"
+            android:layout_toStartOf="@id/tvContact"
+            android:layout_toLeftOf="@id/tvContact"
             android:background="#AAA"
             android:layout="@id/tvDesc" />
 
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvMyName"
             android:layout_centerHorizontal="true"
-            android:text="Contact"
+            android:text="Email"
             android:textColor="#AAA"
             android:textSize="12sp" />
 
@@ -63,8 +63,8 @@
             android:layout_height="0.5dp"
             android:layout_below="@id/tvMyName"
             android:layout_margin="8dp"
-            android:layout_toEndOf="@id/tvDesc"
-            android:layout_toRightOf="@id/tvDesc"
+            android:layout_toEndOf="@id/tvContact"
+            android:layout_toRightOf="@id/tvContact"
             android:background="#AAA"
             android:layout="@id/tvDesc" />
 
@@ -74,7 +74,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tvContact"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
             android:autoLink="email"
             android:linksClickable="true"
@@ -82,11 +81,41 @@
             android:textColor="#7777FF"
             android:textSize="16sp" />
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/tvMyEmail"
+            android:layout_margin="8dp"
+            android:layout_toStartOf="@id/tvMyPhone"
+            android:layout_toLeftOf="@id/tvMyPhone"
+            android:background="#AAA"
+            android:layout="@id/tvDesc" />
+
+        <TextView
+            android:id="@+id/tvMyPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMyEmail"
+            android:layout_centerHorizontal="true"
+            android:text="Phone"
+            android:textColor="#AAA"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/tvMyEmail"
+            android:layout_margin="8dp"
+            android:layout_toEndOf="@id/tvMyPhone"
+            android:layout_toRightOf="@id/tvMyPhone"
+            android:background="#AAA"
+            android:layout="@id/tvDesc" />
+
         <TextView
             android:id="@+id/tvMyPhoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tvMyEmail"
+            android:layout_below="@id/tvMyPhone"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="4dp"
             android:autoLink="phone"

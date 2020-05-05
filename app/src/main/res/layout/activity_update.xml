@@ -27,7 +27,8 @@
         android:id="@+id/edtUpdName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
         android:hint="@string/nama" />
 
     <Button
@@ -35,5 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="simpan" />
+        android:background="@drawable/button_rounded_primary"
+        android:text="simpan"
+        android:textColor="#FFF" />
 </LinearLayout>

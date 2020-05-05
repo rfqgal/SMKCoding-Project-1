@@ -15,9 +15,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:gravity="center"
             android:layout_margin="16dp"
             android:fontFamily="casual"
+            android:gravity="center"
             android:text="@string/biodata_diri"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -26,15 +26,17 @@
             android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:inputType="textCapWords"
-            android:hint="@string/nama" />
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:hint="@string/nama"
+            android:inputType="textCapWords" />
 
         <Spinner
             android:id="@+id/spGender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
             android:entries="@array/gender"
             android:paddingVertical="4dp" />
 
@@ -42,7 +44,8 @@
             android:id="@+id/edtAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
             android:hint="@string/umur"
             android:inputType="number" />
 
@@ -50,7 +53,8 @@
             android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
 
@@ -58,7 +62,8 @@
             android:id="@+id/edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
             android:hint="@string/telp"
             android:inputType="phone" />
 
@@ -66,7 +71,8 @@
             android:id="@+id/edtAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
             android:hint="@string/alamat"
             android:inputType="textMultiLine|textCapWords" />
 
@@ -75,6 +81,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="@string/save" />
+            android:background="@drawable/button_rounded_primary"
+            android:text="@string/save"
+            android:textColor="#FFF" />
     </LinearLayout>
 </ScrollView>
