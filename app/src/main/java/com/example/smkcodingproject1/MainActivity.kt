@@ -57,8 +57,11 @@ class MainActivity : AppCompatActivity() {
             inName.isEmpty() -> edtName.error = "Nama tidak boleh kosong"
             inGender.equals("Pilih Jenis Kelamin", ignoreCase = true) -> toast("Jenis kelamin harus dipilih")
             inAge.isEmpty() -> edtAge.error = "Umur harus diisi"
+            inAge == "0" -> edtAge.error = "Umur tidak boleh 0"
             inEmail.isEmpty() -> edtEmail.error = "Email tidak boleh kosong"
+            inEmail.length < 9 -> edtEmail.error = "Email Anda tidak valid"
             inPhone.isEmpty() -> edtPhone.error = "Nomor telepon tidak boleh kosong"
+            inPhone.length < 10 -> edtPhone.error = "Nomor telepon harus lebih dari 10 digit"
             inAddress.isEmpty() -> edtAddress.error = "Alamat tidak boleh kosong"
 
             else -> {

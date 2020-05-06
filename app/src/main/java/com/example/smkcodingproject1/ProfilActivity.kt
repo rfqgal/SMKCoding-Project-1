@@ -19,8 +19,9 @@ class ProfilActivity : AppCompatActivity() {
 
         getData()
 
-        btnUpdName.setOnClickListener{intentUpdateProfil()}
+        btnUpdName.setOnClickListener { intentUpdateProfil() }
         btnPhone.setOnClickListener { dialPhoneNumber(tvPhone.text.toString()) }
+        btnAbout.setOnClickListener { goToAbout() }
     }
 
     companion object {
@@ -49,7 +50,15 @@ class ProfilActivity : AppCompatActivity() {
         val intent = Intent(this, UpdateActivity::class.java)
 
         val updName = tvName.text.toString()
+        val updAge = tvAge.text.toString()
+        val updEmail = tvEmail.text.toString()
+        val updPhone = tvPhone.text.toString()
+        val updAddress = tvAddress.text.toString()
         intent.putExtra("name", updName)
+        intent.putExtra("age", updAge)
+        intent.putExtra("email", updEmail)
+        intent.putExtra("phone", updPhone)
+        intent.putExtra("address", updAddress)
 
         startActivityForResult(intent, REQUEST_CODE)
     }
@@ -58,8 +67,18 @@ class ProfilActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {
-                val result = data?.getStringExtra("name")
-                tvName.text = result
+                val resName = data?.getStringExtra("name")
+                val resAge = data?.getStringExtra("age")
+                val resEmail = data?.getStringExtra("email")
+                val resPhone = data?.getStringExtra("phone")
+                val resAddress = data?.getStringExtra("address")
+                val resGender = data?.getStringExtra("gender")
+                tvName.text = resName
+                tvAge.text = resAge
+                tvEmail.text = resEmail
+                tvPhone.text = resPhone
+                tvAddress.text = resAddress
+                tvGender.text = resGender
             } else {
                 Toast.makeText(this, "Edit data failed", Toast.LENGTH_SHORT).show()
             }
@@ -73,6 +92,11 @@ class ProfilActivity : AppCompatActivity() {
         if (intent.resolveActivity(packageManager) != null) {
             startActivity(intent)
         }
+    }
+
+    private fun goToAbout() {
+        val intent = Intent(this, AboutActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

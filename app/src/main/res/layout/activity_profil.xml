@@ -81,6 +81,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
                     android:text="laki-laki"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -187,20 +188,30 @@
                     android:id="@+id/btnUpdName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="8dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_rounded_primary"
-                    android:text="Edit Nama"
+                    android:text="Edit"
                     android:textColor="#FFF" />
 
                 <Button
                     android:id="@+id/btnPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="8dp"
                     android:layout_weight="1"
                     android:background="@drawable/button_rounded_primary"
-                    android:text="Telepon"
+                    android:text="Call"
+                    android:textColor="#FFF" />
+
+                <Button
+                    android:id="@+id/btnAbout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_rounded_primary"
+                    android:text="About"
                     android:textColor="#FFF" />
             </LinearLayout>
         </LinearLayout>
